@@ -2,6 +2,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -19,6 +20,7 @@ class Grüßer {
             }
             Vornamensliste.add(Teile[0]);
         }
+        Collections.sort(Vornamensliste);
         for (String Vorname : Vornamensliste) {
             final int WelcherGruß = ThreadLocalRandom.current().nextInt(Grüße.length);
             final String Gruß = Grüße[WelcherGruß] + " ";
